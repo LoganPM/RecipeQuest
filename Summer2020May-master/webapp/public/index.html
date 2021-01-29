@@ -1,0 +1,112 @@
+<!--Logan MacLeod-->
+<!--Index Page-->
+<!DOCTYPE html>
+<html lang ="en">
+
+<head>
+    <!-- favicon stuff, generated using https://realfavicongenerator.net -->
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="asstes/site.webmanifest">
+    <link rel="mask-icon" href="asstes/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <!--JQUERY and styling-->>
+    <script src="script/jquery-3.4.1.js"></script>
+    <script src="script/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style/bootstrap.css">    
+    <!--DataTable CDN-->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdn.datatables.net/v/dt/dt-1.10.18/datatables.min.js"
+    ></script>
+
+    <meta charset="utf-8">
+    <title>Recipe Quest</title>
+</head>
+
+<body>
+    <h1>Search for your new favourite recipe!</h1>
+
+    <hr>
+    <!-- Web Page Code -->
+        <div class = "row">    
+            <div class="col-lg-6">
+                <!-- input field -->
+                <div class="form-group" style="padding-bottom:0px">
+                    <input type="text" class="form-control" id="inputField" placeholder="Input an ingredient and hit enter!">
+                </div>
+                
+                <h1>My Ingredients</h1>
+                
+                <ul id="table" class="w3-ul w3-card-4">
+                <!-- dynamically generated -->
+                </ul>
+                
+                <!-- submit button -->
+                <button type="button" class="btn btn-success btn-lg" id="submitBtn"
+                    >Get Recipies
+                </button>
+                
+                <!-- clear all button -->
+                <button type="button" class="btn btn-success btn-lg" id="clearBtn"
+                    >Clear All Ingredients
+                </button>
+            </div>
+            <div class="col-lg-6">
+                <h1>Ingredients needed to complete the recipe</h1>
+                <ul id="missingIngredTable" class="w3-ul w3-card-4">
+                    <!-- dynamically generated -->
+                </ul>
+            </div>
+        </div>
+        <!-- recipes and their images below -->
+        <!-- One and Two -->
+        <div style="clear: both">
+            <h6 style="float: left; padding-top:15px" id="titleOne">Title 1</h6>
+            <h6 style="padding-left:320px; padding-top:15px" id="titleTwo">Title 2</h6>
+            <img src="" alt="recpOne" id="recpOne" onclick="console.log('recp One was clicked'); displayRecipeData(1)">
+            <img src="" alt="recpTwo" id="recpTwo" onclick="console.log('recp Two was clicked'); displayRecipeData(2)">
+        </div>
+        <!-- Three and Four -->
+        <div style="clear: both">
+            <h6 style="float: left" id="titleThree">Title 3</h6>
+            <h6 style="padding-left:320px" id="titleFour">Title 4</h6>
+            <img src="" alt="recpThree" id="recpThree" onclick="console.log('recp 3 was clicked'); displayRecipeData(3)">
+            <img src="" alt="recpFour" id="recpFour" onclick="console.log('recp 4 was clicked'); displayRecipeData(4)">
+        </div>
+        <!-- Five and Six -->
+        <div style="clear: both">
+            <h6 style="float: left" id="titleFive">Title 5</h6>
+            <h6 style="padding-left:320px" id="titleSix">Title 6</h6>
+            <img src="" alt="recpFive" id="recpFive" onclick="console.log('recp 5 was clicked'); displayRecipeData(5)">
+            <img src="" alt="recpSix"  id="recpSix" onclick="console.log('recp 6 was clicked'); displayRecipeData(6)">
+        </div>
+        <!-- Seven and Eight -->
+        <div style="clear: both">
+            <h6 style="float: left" id="titleSeven">Title 7</h6>
+            <h6 style="padding-left:320px" id="titleEight">Title 8</h6>
+            <img src="" alt="recpSeven" id="recpSeven" onclick="console.log('recp 7 was clicked'); displayRecipeData(7)">
+            <img src="" alt="recpEight" id="recpEight" onclick="console.log('recp 8 was clicked'); displayRecipeData(8)">
+        </div>
+        <!-- Nine and Ten -->
+        <div style="clear: both">
+            <h6 style="float: left" id="titleNine">Title 9</h6>
+            <h6 style="padding-left:320px" id="titleTen">Title 10</h6>
+            <img src="" alt="recpNine" id="recpNine" onclick="console.log('recp 9 was clicked'); displayRecipeData(9)">
+            <img src="" alt="recpTen" id="recpTen" onclick="console.log('recp 10 was clicked'); displayRecipeData(10)">
+        </div>
+    </hr>
+    
+    <!-- JS SCRIPTS -->
+    <script src="js/drawTable.js"></script>
+</body>
+
+</html>
